@@ -15,12 +15,12 @@ head.ready(function() {
 			var scroll_top = $(document).scrollTop(),
 					top = $(this).offset().top,
 					window_height = $(window).height(),
-					wrapper_height = $('.wrapper').height();
+					wrapper_height = $('.wrapper').outerHeight();
 			if (scroll_top >= (top - (window_height/2))) {
 				$(this).addClass('is-visible');
 			};
 			if ((scroll_top + window_height) == wrapper_height) {
-				if ($(this).hasClass('chips__vegitable_potatos-box')) {
+				if ($(this).hasClass('vegitable_potatos-box')) {
 					$(this).addClass('is-visible');
 				};
 			};
@@ -28,4 +28,4 @@ head.ready(function() {
 	});
 	
 
-});
+});  

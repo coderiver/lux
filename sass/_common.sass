@@ -56,16 +56,22 @@ body
 a
 	text-decoration: none
 
-// common blocks      
+// common blocks     
+.wrapper
+	padding-top: 154px
+ 
 .l-center
-	width: 940px
+	width: 960px
 	margin: 0 auto
-	padding: 0 10px
 	
 .header
-	position: relative
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
 	background: #fff5de
-	z-index: 10  
+	box-shadow: 0 1px 1px rgba(0,0,0,.2)
+	z-index: 999
 	.l-center
 		position: relative
 		height: 154px
@@ -122,10 +128,11 @@ a
 				overflow: visible	
 	.social__copy-list	
 		position: absolute
-		top: 77px
+		top: 82px
 		right: 0
-		padding: 12px 17px
+		padding: 5px 17px 12px
 		background: #fff5de 
+		box-shadow: 0 1px 1px rgba(0,0,0,.2)
 		font-size: 16px
 		white-space: nowrap
 		opacity: 0 
@@ -221,41 +228,16 @@ a
 			text-shadow: 1px 1px 1px rgba(211,161,62,.75)
 			line-height: 1
 			z-index: 4 
-	.chips__vegitable
+	.vegitable
 		+transform(translateX(-400px))
-	.chips__vegitable-right
+	.vegitable_right
 		+transform(translateX(400px))
-	.chips__vegitable, .chips__vegitable-right
-		position: absolute
+	.vegitable, .vegitable_right
 		opacity: 0
 		+tr(all .2s linear)
 		&.is-visible
 			opacity: 1
 			+transform(translateX(0))
-	.chips__vegitable_pepper
-		top: 290px
-		left: 30px
-		+s(chips-pepper)
-	.chips__vegitable_pepper-hot
-		top: 70px
-		right: 190px
-		+s(chips-pepper-hot)
-	.chips__vegitable_potatos
-		top: 130px
-		right: 0
-		+s(chips-potatos)
-	.chips__vegitable_potatos-double
-		top: 260px
-		left: 220px
-		+s(chips-potatos-double)
-	.chips__vegitable_potatos-box
-		right: 0
-		bottom: 0
-		+s(chips-potatos-box)
-	.chips__vegitable_onion
-		top: 770px
-		left: 150px
-		+s(chips-onion)
 	&.chips_usual
 		.chips__item
 			&:hover
@@ -272,7 +254,35 @@ a
 		.chips__item_center
 			margin: 0 30px
 			
-		
+.vegitable
+	position: absolute
+	&.vegitable_pepper
+		top: 290px
+		left: 30px
+		+s(pepper)
+	&.vegitable_pepper-hot
+		top: 70px
+		right: 190px
+		+s(pepper-hot)
+	&.vegitable_potatos
+		top: 130px
+		right: 0
+		+s(potatos)
+	&.vegitable_potatos-double
+		top: 260px
+		left: 220px
+		+s(potatos-double)
+	&.vegitable_potatos-box
+		right: 0
+		bottom: 0
+		+s(potatos-box)
+	&.vegitable_onion
+		top: 770px
+		left: 150px
+		+s(onion)
+	&.vegitable_potatos-double-right
+		+s(potatos-double-right)
+
 .chips-extreme
 	padding: 70px 0 60px
 	margin-top: -40px
@@ -283,33 +293,176 @@ a
 	color: #fff
 	text-align: center
 		
-	
+.videos
+	position: relative
+	padding: 70px 0 170px
+	background-image: url(../img/light-bg.png)
+	background-attachment: fixed 
+	overflow: hidden
+	.videos__item
+		position: relative
+		margin-top: 70px
+		&:first-child
+			margin: 0
+	.videos__head, .videos__foot
+		position: relative
+		z-index: 4 
+	.videos__head
+		padding: 4px 4px 0
+		background: #FDF9EF 
+	.videos__head-in
+		padding: 55px 45px 0 
+		border: 1px dashed #c2b0a1
+		border-width: 1px 1px 0
+	.video__content
+		padding-top: 40px
+		line-height: 1.2
+		color: rgb(115,81,43)
+	.video__title
+		margin-bottom: 15px
+		+fn
+		font-size: 38px 
+	.video__text
+		+fh
+	.videos__foot
+		position: relative
+		padding: 0 0 4px 4px
+		margin-right: 65px
+		background: #FDF9EF 
+	.videos__foot-in
+		height: 60px
+		border: 1px dashed #c2b0a1
+		border-width: 0 0 1px 1px
+	.videos__foot-arr
+		position: absolute
+		right: -130px
+		bottom: -30px
+		+s(videos-arr)
+	.videos__foot-shadow
+		position: absolute
+		bottom: -40px
+		right: 0
+		width: 860px
+		height: 40px
+		background: url(../img/videos-shadow.png) no-repeat 0 0 
+	.vegitable_potatos-box
+		position: fixed
+		bottom: -50px
+	.vegitable_pepper
+		position: fixed
+		top: auto
+		left: 0
+		bottom: 0
+	.vegitable_pepper-hot
+		position: fixed
+		top: auto
+		left: 30%
+		bottom: -40px
+	.vegitable_potatos-double-right
+		position: fixed
+		top: 100px
+		right: 130px
+	.vegitable_potatos-double
+		position: fixed
+		top: 170px
+		left: 130px
+
+.action
+	.action__banner
+		position: relative
+		height: 515px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-size: cover  
+		z-index: 2 
+	.action__banner-link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	.action__archive
+		text-align: center
+	.action__foot	
+		position: relative
+		height: 230px
+		padding-top: 170px
+		margin-top: -40px
+		background: url(../img/action-bg.png) repeat-x 0 0 
+		overflow: hidden
+		z-index: 4 
+		.vegitable_potatos-box
+			bottom: -50px
+		.vegitable_pepper
+			left: 360px
+			top: auto
+			bottom: -110px
+
+.btn
+	display: inline-block
+	padding: 11px 37px 6px
+	border-radius: 3px
+	background-color: #f7f2e6
+	box-shadow: inset -1px 3px 0 #fff
+	border: 1px dashed #d9d1c6
+	color: #a98968
+	+fh
+	font-size: 27px
+	text-shadow: 0 1px 0 #fff
+	vertical-align: top
+	+tr(all .2s linear)
+	&:hover
+		background-color: #e0d6bf
+	&.btn_small
+		padding: 8px 13px 5px
+		box-shadow: inset -1px 2px 0 #fff
+		font-size: 18px
+
+.slider
+	position: relative
+	height: 820px
+	background: url(../img/light-bg.png)
+	.l-center
+		+clr
+	.slider__container
+		float: right
+		width: 580px
+		margin-right: 65px
+	.slider__head
+		padding: 4px 4px 0
+		background: #FFF
+	.slider__head-in
+		padding: 40px 75px 0 
+		border: 1px dashed #c2b0a1
+		border-width: 1px 1px 0
+		line-height: 1.2
+	.slider__title
+		margin-bottom: 20px
+		+fn
+		color: #df4f00
+		color: rgba(223,79,1, 0.8)
+		font-size: 50px
+		text-shadow: 1px 1px 1px #def, 0 0 0 #000
+	.slider__text	
+		margin-bottom: 30px
+		+fh
+		color: #804a2f
+		font-size: 18px
+		text-shadow: 0 1px 0 #fff1e3
+	.slider__weight
+		margin-bottom: 20px
+		+fh
+		color: #814a2f
+		font-size: 17px
+		text-shadow: 0 1px 0 #fff1e3
+		-webkit-font-smoothing: antialiased
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
