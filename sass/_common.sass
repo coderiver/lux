@@ -36,14 +36,264 @@
 //				display: none
 // ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book", Arial, sans-serif 
++font(NautilusPompilus, nautilus)  
+=fn
+	font-family: "NautilusPompilus", Arial, sans-serif 
++font(HeliosCondensedBold, HeliosCondBold)  
+=fh
+	font-family: "HeliosCondensedBold", Arial, sans-serif 
++font(PFDinTextProRegular, PFDinTextProRegular)  
+=fd
+	font-family: "PFDinTextProRegular", Arial, sans-serif 
+	
+$cl: #602d1d	
 	
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	+fd
+	font-size: 16px 
 	line-height: 1.4
-
+	color: $cl 
+a
+	text-decoration: none
 
 // common blocks      
+.l-center
+	width: 940px
+	margin: 0 auto
+	padding: 0 10px
+	
+.header
+	background: #fff5de 
+	.l-center
+		position: relative
+		height: 154px
+	.social
+		position: absolute
+		top: 72px
+		right: 10px
+
+.logo
+	position: absolute
+	top: 30px
+	left: 415px
+	+s(logo)
+
+.nav
+	position: absolute
+	top: 88px
+	left: 10px
+	a
+		float: left
+		margin-left: 30px
+		+fh
+		text-transform: uppercase
+		color: $cl
+		&:first-child
+			margin: 0
+		&.nav__margin
+			margin-right: 190px
+
+.social
+	font-size: 0
+	>li
+		position: relative
+		display: inline-block
+		margin-left: 10px
+		vertical-align: top
+		&:first-child
+			margin: 0
+	a
+		display: block
+	.social__fb
+		+s(fb)
+	.social__vk
+		+s(vk)
+	.social__mail
+		+s(mail)
+	.social__copy
+		+s(copy)
+		&:hover
+			.social__copy-list	
+				display: block
+	.social__copy-list	
+		display: none
+		position: absolute
+		top: 77px
+		right: 0
+		padding: 12px 17px
+		background: #fff5de 
+		font-size: 16px
+		white-space: nowrap
+		li
+			margin-top: 10px
+			&:first-child
+				margin: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
