@@ -63,7 +63,9 @@ a
 	padding: 0 10px
 	
 .header
-	background: #fff5de 
+	position: relative
+	background: #fff5de
+	z-index: 10  
 	.l-center
 		position: relative
 		height: 154px
@@ -77,11 +79,13 @@ a
 	top: 30px
 	left: 415px
 	+s(logo)
+	z-index: 4 
 
 .nav
 	position: absolute
 	top: 88px
 	left: 10px
+	z-index: 2 
 	a
 		float: left
 		margin-left: 30px
@@ -113,10 +117,10 @@ a
 	.social__copy
 		+s(copy)
 		&:hover
-			.social__copy-list	
-				display: block
+			.social__copy-list
+				opacity: 1 
+				overflow: visible	
 	.social__copy-list	
-		display: none
 		position: absolute
 		top: 77px
 		right: 0
@@ -124,13 +128,162 @@ a
 		background: #fff5de 
 		font-size: 16px
 		white-space: nowrap
+		opacity: 0 
+		overflow: hidden
+		+tr(all .2s linear)
 		li
 			margin-top: 10px
 			&:first-child
 				margin: 0
 
+.banner
+	position: relative
+	height: 304px
+	background: url(../img/banner.jpg) no-repeat 50% 50%
+	background-size: cover  
+	.banner__link
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0 
 
-
+.chips
+	position: relative
+	height: 1190px
+	margin-top: -35px
+	background: url(../img/chips-bg.png) repeat-x 0 0 
+	overflow: hidden
+	.chips__title
+		padding: 100px 0 50px
+		+fn
+		color: #72502b
+		font-size: 57px
+		text-shadow: 0 2px 0 #fff
+		text-align: center
+	.chips__list
+		margin: 0 -50px
+		text-align: center
+	.chips__item
+		position: relative
+		display: inline-block
+		margin-bottom: 135px
+		vertical-align: top
+		z-index: 2 
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 150px
+			height: 150px
+			margin: -75px 0 0 -75px 
+			border-radius: 50%
+			box-shadow: 0 0 100px 10px $cl
+			z-index: 2 
+	.chips__item_center
+		margin: 0 120px
+	.chips__el
+		position: relative
+		display: block
+		+tr(all .2s linear)
+		z-index: 4 
+	@for $i from 1 through 9
+		.chips__el_#{$i}
+			+s(chips#{$i})
+	.ships__title
+		position: absolute
+		bottom: -50px
+		left: -50px
+		opacity: 0
+		+scale(.8)
+		+tr(all .2s linear) 
+		z-index: 4 
+		i, span
+			width: 190px
+			height: 190px
+		i
+			position: absolute
+			top: 0
+			left: 0
+			border-radius: 50%
+			border: 3px solid #fff
+			background-color: #fb0
+			opacity: .74 
+			z-index: 2 
+		span
+			position: relative
+			display: table-cell
+			vertical-align: middle
+			color: #fff
+			+fn
+			font-size: 32px
+			text-shadow: 1px 1px 1px rgba(211,161,62,.75)
+			line-height: 1
+			z-index: 4 
+	.chips__vegitable
+		+transform(translateX(-400px))
+	.chips__vegitable-right
+		+transform(translateX(400px))
+	.chips__vegitable, .chips__vegitable-right
+		position: absolute
+		opacity: 0
+		+tr(all .2s linear)
+		&.is-visible
+			opacity: 1
+			+transform(translateX(0))
+	.chips__vegitable_pepper
+		top: 290px
+		left: 30px
+		+s(chips-pepper)
+	.chips__vegitable_pepper-hot
+		top: 70px
+		right: 190px
+		+s(chips-pepper-hot)
+	.chips__vegitable_potatos
+		top: 130px
+		right: 0
+		+s(chips-potatos)
+	.chips__vegitable_potatos-double
+		top: 260px
+		left: 220px
+		+s(chips-potatos-double)
+	.chips__vegitable_potatos-box
+		right: 0
+		bottom: 0
+		+s(chips-potatos-box)
+	.chips__vegitable_onion
+		top: 770px
+		left: 150px
+		+s(chips-onion)
+	&.chips_usual
+		.chips__item
+			&:hover
+				.chips__el
+					+scale(1.2)
+				.ships__title
+					+scale(1)
+					opacity: 1 
+	&.chips_extreme
+		height: 640px
+		padding-top: 120px
+		.chips__item
+			margin-bottom: 0
+		.chips__item_center
+			margin: 0 30px
+			
+		
+.chips-extreme
+	padding: 70px 0 60px
+	margin-top: -40px
+	background: url(../img/chips-extreme-bg.png) 
+	+fn
+	font-size: 61px
+	text-shadow: 1px 1px 0 rgba(115,85,59,.66)
+	color: #fff
+	text-align: center
+		
+	
 
 
 
