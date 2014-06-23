@@ -49,6 +49,7 @@
 $cl: #602d1d	
 	
 body
+	min-width: 980px
 	+fd
 	font-size: 16px 
 	line-height: 1.4
@@ -124,9 +125,9 @@ a
 		+s(copy)
 		&:hover
 			.social__copy-list
-				opacity: 1 
-				overflow: visible	
+				display: block
 	.social__copy-list	
+		display: none
 		position: absolute
 		top: 82px
 		right: 0
@@ -135,9 +136,6 @@ a
 		box-shadow: 0 1px 1px rgba(0,0,0,.2)
 		font-size: 16px
 		white-space: nowrap
-		opacity: 0 
-		overflow: hidden
-		+tr(all .2s linear)
 		li
 			margin-top: 10px
 			&:first-child
@@ -188,6 +186,12 @@ a
 			border-radius: 50%
 			box-shadow: 0 0 100px 10px $cl
 			z-index: 2 
+		&:hover
+			.chips__el
+				+scale(1.2)
+			.chips__item-title
+				+scale(1)
+				opacity: 1 
 	.chips__item_center
 		margin: 0 120px
 	.chips__el
@@ -198,7 +202,7 @@ a
 	@for $i from 1 through 9
 		.chips__el_#{$i}
 			+s(chips#{$i})
-	.ships__title
+	.chips__item-title
 		position: absolute
 		bottom: -50px
 		left: -50px
@@ -238,21 +242,19 @@ a
 		&.is-visible
 			opacity: 1
 			+transform(translateX(0))
-	&.chips_usual
-		.chips__item
-			&:hover
-				.chips__el
-					+scale(1.2)
-				.ships__title
-					+scale(1)
-					opacity: 1 
 	&.chips_extreme
 		height: 640px
 		padding-top: 120px
 		.chips__item
 			margin-bottom: 0
+			&:hover
+				.chips__el
+					+scale(1)
 		.chips__item_center
 			margin: 0 30px
+		.chips__item-title
+			i
+				background: #000 
 			
 .vegitable
 	position: absolute
@@ -420,22 +422,45 @@ a
 
 .slider
 	position: relative
-	height: 820px
+	height: 100vh
+	min-height: 880px
+	margin-top: -154px
+	padding-top: 154px
 	background: url(../img/light-bg.png)
+	+box
+	&.slider_dark
+		background: url(../img/dark-bg.jpg) 0 0
+		background-size: auto 100% 
+		.vegitable_potatos-box
+			+s(potatos-box-dark)
+		.vegitable_potatos-double-right
+			+s(potatos-double-right-dark)
 	.l-center
+		position: relative
 		+clr
+		z-index: 4 
+	.slider__wrapper
+		position: relative
 	.slider__container
 		float: right
-		width: 580px
-		margin-right: 65px
+		width: 630px
+		padding: 100px 65px 150px 0 
 	.slider__head
 		padding: 4px 4px 0
 		background: #FFF
 	.slider__head-in
-		padding: 40px 75px 0 
+		position: relative
+		padding: 40px 75px 0 135px
 		border: 1px dashed #c2b0a1
 		border-width: 1px 1px 0
 		line-height: 1.2
+	.slider__items
+		position: relative
+		z-index: 20 
+	.slider__item
+		display: none
+		&.is-active
+			display: block
 	.slider__title
 		margin-bottom: 20px
 		+fn
@@ -443,6 +468,7 @@ a
 		color: rgba(223,79,1, 0.8)
 		font-size: 50px
 		text-shadow: 1px 1px 1px #def, 0 0 0 #000
+		line-height: .8
 	.slider__text	
 		margin-bottom: 30px
 		+fh
@@ -456,18 +482,197 @@ a
 		font-size: 17px
 		text-shadow: 0 1px 0 #fff1e3
 		-webkit-font-smoothing: antialiased
+	.slider__foot
+		position: relative
+		padding: 0 0 4px 4px
+		margin-right: 65px
+		background: #fff 
+	.slider__foot-in
+		height: 60px
+		border: 1px dashed #c2b0a1
+		border-width: 0 0 1px 1px
+	.slider__foot-arr
+		position: absolute
+		right: -129px
+		bottom: -30px
+		+s(videos-arr)
+	.slider__foot-shadow
+		position: absolute
+		bottom: -40px
+		right: 0
+		width: 515px
+		height: 40px
+		background: url(../img/slider-shadow.png) no-repeat 0 0 
+	.slider__prev, .slider__next
+		position: absolute
+		top: 250px
+		z-index: 6 
+	.slider__prev
+		left: 0
+		+s(slider-prev)
+	.slider__next
+		right: 0
+		+s(slider-next)
+	.slider__boxes
+		position: absolute
+		top: -30px
+		left: -125px
+		z-index: 4 
+		img
+			display: none
+			position: absolute
+			top: 0
+			left: 0
+	.vegitable_potatos-double-right
+		top: 110px
+		right: 130px
 
-
-
-
-
-
-  
-
-
-
-
-
+.extreme
+	background: url(../img/dark-bg.jpg) 0 0
+	background-attachment: fixed 
+	background-size: auto 100% 
+	overflow: hidden
+	.extreme__item
+		position: relative
+		z-index: 4 
+		.l-center
+			position: relative
+			height: 570px
+	.extreme__item-in
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		overflow: hidden
+	.extreme__content
+		position: absolute
+		text-align: center
+		z-index: 4 
+	.extreme__pic	
+		position: absolute
+	.extreme__logo, .extreme__title
+		display: inline-block
+		vertical-align: top
+	.extreme__title
+		margin-bottom: 20px
+	.extreme__text
+		+fh
+		font-size: 19px
+		color: #FFF 
+		-webkit-font-smoothing: antialiased
+	.extreme__arrows
+		position: absolute
+		top: 10px
+		left: 50%
+		margin-left: -19px
+		+s(extreme-arrs)
+		z-index: 10
+	.extreme__item_1
+		height: 640px
+		overflow: hidden
+		z-index: 2 
+		.l-center
+			top: 0
+			height: 640px
+			+clr
+		.extreme__logo
+			+s(extreme-logo)
+		.extreme__title
+			margin-top: -10px
+			+s(extreme-title-item-1)
+		.extreme__pic
+			top: 0
+			left: 0
+			width: 640px
+			height: 640px
+			background: url(../img/extreme-pic-item-1.png) 
+		.extreme__content
+			top: 0
+			left: 640px
+			width: 340px
+			padding-top: 10px
+			margin-left: -40px
+	.extreme__item_2
+		margin: 640px 0 570px 
+		+background-image(radial-gradient(570px 570px, #ce1517, #570910))
+		z-index: 6 
+		.l-center
+			height: 570px
+		.extreme__pic	
+			top: -30px
+			right: -60px
+			width: 636px
+			height: 693px
+			background: url(../img/extreme-pic-item-2.png) 
+		.extreme__content
+			top: 100px
+			left: 20px
+			width: 420px
+		.extreme__title
+			+s(extreme-title-item-2)
+	.extreme__item_3
+		height: 0
+		.l-center
+			bottom: 120px
+	.extreme__item_3
+		top: 154px + 695px
+		z-index: 2
+		.l-center
+			height: 570px
+		.extreme__pic	
+			top: -50px
+			left: -60px
+			width: 625px
+			height: 695px
+			background: url(../img/extreme-pic-item-3.png) 
+		.extreme__content
+			top: 120px
+			right: 20px
+			width: 360px
+		.extreme__title
+			+s(extreme-title-item-3)
+	.extreme__item_4
+		margin-bottom: 700px
+		+background-image(radial-gradient(570px 570px, #86125b, #44052d))
+		.extreme__pic	
+			top: -30px
+			right: -60px
+			width: 600px
+			height: 664px
+			background: url(../img/extreme-pic-item-4.png) 
+		.extreme__content
+			top: 120px
+			left: 20px
+			width: 420px
+		.extreme__title
+			+s(extreme-title-item-4)
+	.extreme__item_5
+		height: 0
+		bottom: 0
+		overflow: hidden
+		z-index: 2
+		.l-center
+			bottom: 0
+			height: 700px
+		.extreme__text
+			padding: 60px 0 40px
+			font-size: 26px
+			text-align: center
+	.extreme__video
+		width: 640px
+		margin: 0 auto
+		border: 3px solid #1b0d07
+		box-shadow: 10px 15px 16px 0 rgba(0,0,0,.56)
+		iframe
+			display: block
+	.extreme__item_fixed
+		position: fixed
+		left: 0
+		right: 0
+		.l-center
+			position: absolute
+			left: 0
+			right: 0
 
 
 
