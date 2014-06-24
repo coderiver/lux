@@ -75,11 +75,17 @@ head.ready(function() {
 		// 3
 		if (scroll_top >= 515) {
 			item_3.height(scroll_top - 515);
-		};
+		}
+		else {
+			item_3.height(0);
+		}
 		// 5
 		if (scroll_top >= 1545) {
 			item_5.height(scroll_top - 1545);
-		};
+		}
+		else {
+			item_5.height(0);
+		}
 
 	});
 	
