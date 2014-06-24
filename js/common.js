@@ -67,20 +67,9 @@ head.ready(function() {
 	$(window).scroll(function(){
 		var scroll_top = $(document).scrollTop();
 		// chips vegitable
-		var chips_vegitable = $('.js-chips-vegitable');
-		chips_vegitable.each(function(){
-			var top = $(this).offset().top,
-					window_height = $(window).height(),
-					wrapper_height = $('.wrapper').outerHeight();
-			if (scroll_top >= (top - (window_height/2))) {
-				$(this).addClass('is-visible');
-			};
-			if ((scroll_top + window_height) == wrapper_height) {
-				if ($(this).hasClass('vegitable_potatos-box')) {
-					$(this).addClass('is-visible');
-				};
-			};
-		});
+		$('.js-vegitable-pepper').css('margin-top', (scroll_top*.2)+'px');
+		$('.js-vegitable-potatos').css('margin-top', (scroll_top*.5)+'px');
+		$('.js-vegitable-onion').css('margin-top', (scroll_top*.18)+'px');
 
 		// extreme fixed blocks
 		var fixed_blocks = $('.extreme'),
