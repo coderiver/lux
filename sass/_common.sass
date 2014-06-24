@@ -59,39 +59,38 @@ a
 
 // common blocks     
 .wrapper
-	padding-top: 154px
+	padding-top: 101px
  
 .l-center
 	width: 960px
 	margin: 0 auto
-	
+
 .header
 	position: fixed
 	top: 0
 	left: 0
 	right: 0
+	padding: 30px 0
 	background: #fff5de
 	box-shadow: 0 1px 1px rgba(0,0,0,.2)
 	z-index: 999
 	.l-center
 		position: relative
-		height: 154px
+		+clr
 	.social
-		position: absolute
-		top: 72px
-		right: 10px
+		float: right
+		margin-right: 10px
 
 .logo
 	position: absolute
-	top: 30px
+	top: -30px
 	left: 415px
 	+s(logo)
 	z-index: 4 
 
 .nav
-	position: absolute
-	top: 88px
-	left: 10px
+	float: left
+	margin: 10px 0 0 10px
 	z-index: 2 
 	a
 		float: left
@@ -129,7 +128,7 @@ a
 	.social__copy-list	
 		display: none
 		position: absolute
-		top: 82px
+		top: 71px
 		right: 0
 		padding: 5px 17px 12px
 		background: #fff5de 
@@ -194,6 +193,12 @@ a
 				opacity: 1 
 	.chips__item_center
 		margin: 0 120px
+	.chips__item_7
+		background: url(../img/chips7-bg.png) 
+	.chips__item_8
+		background: url(../img/chips8-bg.png) 
+	.chips__item_9
+		background: url(../img/chips9-bg.png) 
 	.chips__el
 		position: relative
 		display: block
@@ -246,10 +251,11 @@ a
 		height: 640px
 		padding-top: 120px
 		.chips__item
+			width: 300px
 			margin-bottom: 0
-			&:hover
-				.chips__el
-					+scale(1)
+		.chips__el
+			display: inline-block
+			vertical-align: top
 		.chips__item_center
 			margin: 0 30px
 		.chips__item-title
@@ -393,10 +399,13 @@ a
 		background: url(../img/action-bg.png) repeat-x 0 0 
 		overflow: hidden
 		z-index: 4 
+		.l-center
+			position: relative
+			z-index: 4 
 		.vegitable_potatos-box
 			bottom: -50px
 		.vegitable_pepper
-			left: 360px
+			left: 15%
 			top: auto
 			bottom: -110px
 
@@ -423,24 +432,35 @@ a
 .slider
 	position: relative
 	height: 100vh
-	min-height: 880px
-	margin-top: -154px
-	padding-top: 154px
+	min-height: 810px
+	margin-top: -101px
+	padding-top: 101px
 	background: url(../img/light-bg.png)
 	+box
 	&.slider_dark
-		background: url(../img/dark-bg.jpg) 0 0
-		background-size: auto 100% 
-		.vegitable_potatos-box
-			+s(potatos-box-dark)
+		.slider__dark-bg
+			display: block
+		.vegitable_potatos-box 
+			+sp(potatos-box-dark)
 		.vegitable_potatos-double-right
-			+s(potatos-double-right-dark)
+			+sp(potatos-double-right-dark)
 	.l-center
 		position: relative
 		+clr
-		z-index: 4 
+		z-index: 6
+	.slider__dark-bg
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: url(../img/dark-bg.jpg) 0 0
+		background-size: auto 100% 
+		z-index: 2 
 	.slider__wrapper
 		position: relative
+		+clr
 	.slider__container
 		float: right
 		width: 630px
@@ -454,13 +474,13 @@ a
 		border: 1px dashed #c2b0a1
 		border-width: 1px 1px 0
 		line-height: 1.2
-	.slider__items
-		position: relative
-		z-index: 20 
 	.slider__item
 		display: none
 		&.is-active
 			display: block
+	.slider__title, .slider__text, .slider__weight, .btn
+		position: relative
+		z-index: 4 
 	.slider__title
 		margin-bottom: 20px
 		+fn
@@ -513,16 +533,15 @@ a
 	.slider__next
 		right: 0
 		+s(slider-next)
-	.slider__boxes
+	.slider__pic
 		position: absolute
-		top: -30px
-		left: -125px
-		z-index: 4 
+		top: -120px
+		left: -385px
+		z-index: 2
 		img
-			display: none
-			position: absolute
-			top: 0
-			left: 0
+			display: block
+	.vegitable
+		z-index: 4 
 	.vegitable_potatos-double-right
 		top: 110px
 		right: 130px
