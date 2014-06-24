@@ -161,7 +161,7 @@ a { text-decoration: none; }
 .slider .vegitable_potatos-double-right { top: 110px; right: 130px; }
 
 .extreme { background: url(../img/dark-bg.jpg) 0 0; background-attachment: fixed; background-size: auto 100%; overflow: hidden; }
-.extreme .extreme__item { position: relative; z-index: 4; }
+.extreme .extreme__item { position: relative; z-index: 10; }
 .extreme .extreme__item .l-center { position: relative; height: 570px; }
 .extreme .extreme__item-in { position: absolute; left: 0; right: 0; bottom: 0; overflow: hidden; }
 .extreme .extreme__content { position: absolute; text-align: center; z-index: 4; }
@@ -182,10 +182,8 @@ a { text-decoration: none; }
 .extreme .extreme__item_2 .extreme__pic { top: -30px; right: -60px; width: 636px; height: 693px; background: url(../img/extreme-pic-item-2.png); }
 .extreme .extreme__item_2 .extreme__content { top: 100px; left: 20px; width: 420px; }
 .extreme .extreme__item_2 .extreme__title { background: url('../img/icons-s52b207e4a8.png') 0 -6388px no-repeat; width: 416px; height: 126px; }
-.extreme .extreme__item_3 { height: 0; }
-.extreme .extreme__item_3 .l-center { bottom: 120px; }
-.extreme .extreme__item_3 { top: 849px; z-index: 2; }
-.extreme .extreme__item_3 .l-center { height: 570px; }
+.extreme .extreme__item_3 { top: 849px; height: 0; z-index: 2; }
+.extreme .extreme__item_3 .l-center { bottom: 120px; height: 570px; }
 .extreme .extreme__item_3 .extreme__pic { top: -50px; left: -60px; width: 625px; height: 695px; background: url(../img/extreme-pic-item-3.png); }
 .extreme .extreme__item_3 .extreme__content { top: 120px; right: 20px; width: 360px; }
 .extreme .extreme__item_3 .extreme__title { background: url('../img/icons-s52b207e4a8.png') 0 -6259px no-repeat; width: 350px; height: 119px; }
@@ -193,7 +191,7 @@ a { text-decoration: none; }
 .extreme .extreme__item_4 .extreme__pic { top: -30px; right: -60px; width: 600px; height: 664px; background: url(../img/extreme-pic-item-4.png); }
 .extreme .extreme__item_4 .extreme__content { top: 120px; left: 20px; width: 420px; }
 .extreme .extreme__item_4 .extreme__title { background: url('../img/icons-s52b207e4a8.png') 0 -6524px no-repeat; width: 350px; height: 119px; }
-.extreme .extreme__item_5 { height: 0; bottom: 0; overflow: hidden; z-index: 2; }
+.extreme .extreme__item_5 { height: 0; bottom: 0; background: url(../img/dark-bg.jpg) 0 0; background-attachment: fixed; background-size: auto 100%; overflow: hidden; z-index: 2; }
 .extreme .extreme__item_5 .l-center { bottom: 0; height: 700px; }
 .extreme .extreme__item_5 .extreme__text { padding: 60px 0 40px; font-size: 26px; text-align: center; }
 .extreme .extreme__video { width: 640px; margin: 0 auto; border: 3px solid #1b0d07; box-shadow: 10px 15px 16px 0 rgba(0, 0, 0, 0.56); }
