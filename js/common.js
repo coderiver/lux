@@ -7,6 +7,12 @@ head.ready(function() {
 		$('.js-popup').hide();
 	});
 
+	setTimeout(function() {
+	  if (location.hash) {
+	    window.scrollTo(0, 0);
+	  }
+	}, 100);
+
 	// slider
 	function slider() {
 		var el = $('.slider'),
