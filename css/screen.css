@@ -93,6 +93,10 @@ a { text-decoration: none; }
 .chips .chips__item-title i, .chips .chips__item-title span { width: 190px; height: 190px; }
 .chips .chips__item-title i { position: absolute; top: 0; left: 0; border-radius: 50%; border: 3px solid white; background-color: #ffbb00; opacity: 0.74; z-index: 2; }
 .chips .chips__item-title span { position: relative; display: table-cell; vertical-align: middle; color: white; font-family: "NautilusPompilus", Arial, sans-serif; font-size: 32px; text-shadow: 1px 1px 1px rgba(211, 161, 62, 0.75); line-height: 1; z-index: 4; }
+.chips .vegitable { -webkit-transform: translateX(-400px); -moz-transform: translateX(-400px); -ms-transform: translateX(-400px); -o-transform: translateX(-400px); transform: translateX(-400px); }
+.chips .vegitable_right { -webkit-transform: translateX(400px); -moz-transform: translateX(400px); -ms-transform: translateX(400px); -o-transform: translateX(400px); transform: translateX(400px); }
+.chips .vegitable, .chips .vegitable_right { position: absolute; opacity: 0; -webkit-transition: -webkit-transform 0.2s, opacity 0.2s; -moz-transition: -moz-transform 0.2s, opacity 0.2s; -o-transition: -o-transform 0.2s, opacity 0.2s; transition: transform 0.2s, opacity 0.2s; }
+.chips .vegitable.is-visible, .chips .vegitable_right.is-visible { opacity: 1; -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
 
 .vegitable { position: absolute; left: 50%; }
 .vegitable.vegitable_pepper { top: 290px; margin-left: -730px; background: url('../img/icons-s4e1cd0db7c.png') 0 -4668px no-repeat; width: 280px; height: 270px; }
