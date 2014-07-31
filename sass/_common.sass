@@ -195,6 +195,17 @@ a
 		text-shadow: 1px 1px 0 rgba(115,85,59,.66)
 		color: #fff
 		text-align: center
+		position: relative
+
+		&.chips__title-extreme_angry
+			&:before
+				position: absolute
+				content: ' ' 
+				top: -45px
+				left: 0
+				width: 100%
+				height: 75px    
+				background: url(../img/ch.png) 
 	.chips__list
 		margin: 0 -50px
 		text-align: center
@@ -237,6 +248,12 @@ a
 	@for $i from 1 through 9
 		.chips__el_#{$i}
 			+s(chips#{$i})
+	.chips__el_10
+		+png(a3)
+	.chips__el_11
+		+png(a2)
+	.chips__el_12
+		+png(a1)
 	.chips__item-title
 		position: absolute
 		bottom: -50px
@@ -456,6 +473,24 @@ a
 			+sp(potatos-box-dark)
 		.vegitable_potatos-double-right
 			+sp(potatos-double-right-dark)
+	&.slider_sir
+		background: url(../img/sir-bg.jpg)
+		background-size: cover
+		background-color: #E8BC3F 
+		.slider__dark-bg
+			display: none
+	&.slider_cola
+		background: url(../img/cola-bg.jpg)
+		background-size: cover
+		background-color: #C00027 
+		.slider__dark-bg
+			display: none
+	&.slider_smet
+		background: url(../img/smet-bg.jpg)
+		background-color: #7DAF36 
+		background-size: cover
+		.slider__dark-bg
+			display: none
 	.l-center
 		position: relative
 		+clr
@@ -557,6 +592,30 @@ a
 	.vegitable_potatos-double-right
 		top: 110px
 		margin-left: 600px
+#sir
+	.slider__title
+		color: #CF8925 
+		font-style: normal 
+	.slider__text
+		color: #CF8925 
+	.slider__weight
+		color: #CF8925 
+#smettacib
+	.slider__title
+		color: #739A3B 
+		font-style: normal 
+	.slider__text
+		color: #739A3B 
+	.slider__weight
+		color: #739A3B 
+#cola
+	.slider__title
+		color: #C2272F 
+		font-style: normal 
+	.slider__text
+		color: #C2272F 
+	.slider__weight
+		color: #C2272F 
 
 .extreme
 	background: url(../img/dark-bg.jpg) 0 0
