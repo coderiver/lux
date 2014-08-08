@@ -765,13 +765,144 @@ a
 			left: 0
 			right: 0
 
-
-
-
-
-
-
-
+.birds
+	.birds__item
+		position: relative
+		.l-center
+			position: relative
+			height: 740px
+	.birds__item_yellow
+		background: url(../img/birds-yellow.jpg) no-repeat 50% 100% #e8bb3e 
+		.birds__content
+			top: 340px
+			left: 540px
+	.birds__item_red
+		background: url(../img/birds-red.jpg) no-repeat 50% 100% #c00027 
+		.birds__content
+			top: 310px
+			left: 170px
+		.birds__text
+			margin-bottom: 15px
+	.birds__item_green
+		background: url(../img/birds-green.jpg) no-repeat 50% 100% #7daf36 
+		.birds__content
+			top: 340px
+			left: 540px
+	.birds__item_video
+		background: url(../img/birds-video.jpg) no-repeat 50% 50% #fbf7b7
+		.l-center
+			+vertical
+	.birds__item_footer
+		background: #EFD982 
+		.l-center
+			height: auto
+			padding: 160px 0 60px
+			text-align: center
+	.birds__video
+		display: inline-block
+		vertical-align: middle
+	.birds__chips
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 137px
+		background: url(../img/birds-chips.png) repeat-x 50% 50%
+	.birds__logo
+		position: absolute
+		top: 35px 
+		left: 50%
+		margin-left: -140px
+		+s(birds-logo)
+	.birds__content
+		position: absolute
+		width: 290px
+	.birds__text
+		margin-bottom: 45px
+		text-shadow: 0 1px 0 rgba(0,0,0,.25)
+		+fh
+		font-size: 26px
+		color: #FFF
+		text-transform: uppercase 
+		line-height: 1.2
+	.birds__btn
+		display: block
+		padding-top: 32px
+		+s(birds-btn)
+		+fh
+		font-size: 20px
+		text-transform: uppercase
+		color: #FFF 
+		box-sizing: border-box
+		text-align: center
+		&:hover
+			+sp(birds-btn-h)
+		&.birds__btn_red
+			+s(birds-btn-red)
+			&:hover
+				+sp(birds-btn-red-h)
+		&.birds__btn_green
+			+s(birds-btn-green)
+			&:hover
+				+sp(birds-btn-green-h)
+		&.birds__btn_load
+			+s(birds-btn-load)
+			&:hover
+				+sp(birds-btn-load-h)
+	.birds__cola
+		position: absolute
+		bottom: 20px 
+		left: 480px
+		+s(birds-cola)
+		z-index: 2 
+	.birds__footer
+		display: inline-block
+	.birds__files
+		margin-bottom: 100px
+		font-size: 0
+		ul, li
+			display: inline-block
+			vertical-align: top
+		img
+			margin-bottom: 5px
+		a, span
+			font-size: 16px
+			color: #997A00 
+		span
+			padding: 0 3px
+	.birds__screens
+		width: 360px 
+		margin-right: 30px 
+		li
+			width: 160px 
+			margin: 0 20px 21px 0 
+		img
+			margin-bottom: 5px
+	.birds__posters
+		width: 288px
+		li
+			width: 124px 
+			margin: 0 0 10px 20px
+	.birds__load
+		position: relative
+		display: inline-block
+		margin-bottom: 80px
+		vertical-align: top
+	.birds__face
+		position: absolute
+		top: -64px
+		left: -31px
+		+s(birds-face)
+	.birds__rovio-logo
+		display: inline-block
+		margin-bottom: 40px
+		+s(birds-rovio)
+		vertical-align: top
+	.birds__rovio-copyright
+		font-size: 15px
+		color: #A18E42 
+		text-transform: uppercase
+		
 
 
 
