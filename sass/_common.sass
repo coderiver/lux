@@ -768,16 +768,46 @@ a
 .birds
 	.birds__item
 		position: relative
+		overflow: hidden
 		.l-center
 			position: relative
 			height: 740px
+	.birds__fixed
+		position: fixed
+		top: 841px
+		left: 0
+		right: 0
+		height: 0
+		z-index: 2
+		.birds__item
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 0
+			overflow: hidden
+		.l-center
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+	.birds__fixed_footer
+		top: auto
+		bottom: 0
 	.birds__item_yellow
+		position: fixed
+		top: 101px
+		left: 0
+		right: 0
 		background: url(../img/birds-yellow.jpg) no-repeat 50% 100% #e8bb3e 
+		z-index: 2 
 		.birds__content
 			top: 340px
 			left: 540px
 	.birds__item_red
+		margin: 740px 0
 		background: url(../img/birds-red.jpg) no-repeat 50% 100% #c00027 
+		z-index: 4
 		.birds__content
 			top: 310px
 			left: 170px
@@ -785,15 +815,23 @@ a
 			margin-bottom: 15px
 	.birds__item_green
 		background: url(../img/birds-green.jpg) no-repeat 50% 100% #7daf36 
+		z-index: 6
 		.birds__content
 			top: 340px
 			left: 540px
 	.birds__item_video
+		margin-bottom: 979px
 		background: url(../img/birds-video.jpg) no-repeat 50% 50% #fbf7b7
+		z-index: 10
 		.l-center
 			+vertical
 	.birds__item_footer
+		position: fixed
+		left: 0
+		right: 0
+		bottom: 0
 		background: #EFD982 
+		z-index: 8
 		.l-center
 			height: auto
 			padding: 160px 0 60px
