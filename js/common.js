@@ -186,8 +186,8 @@ head.ready(function() {
 		var angry_birds = $('.js-angry-birds'),
 				angry_birds_item_1 = angry_birds.find('.birds__item_green'),
 				angry_birds_item_2 = angry_birds.find('.birds__item_footer');
-		if (scroll_top >= 740) {
-			angry_birds_item_1.height(scroll_top - 740);
+		if (scroll_top >= 660) {
+			angry_birds_item_1.height(scroll_top - 660);
 		}
 		else {
 			angry_birds_item_1.height(0);

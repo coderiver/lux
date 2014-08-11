@@ -232,14 +232,14 @@ a { text-decoration: none; }
 
 .birds { background: #fbf7b7; }
 .birds .birds__item { position: relative; overflow: hidden; }
-.birds .birds__item .l-center { position: relative; height: 740px; }
-.birds .birds__fixed { position: fixed; top: 841px; left: 0; right: 0; height: 0; z-index: 2; }
+.birds .birds__item .l-center { position: relative; height: 660px; }
+.birds .birds__fixed { position: fixed; top: 761px; left: 0; right: 0; height: 0; z-index: 2; }
 .birds .birds__fixed .birds__item { position: absolute; bottom: 0; left: 0; right: 0; height: 0; overflow: hidden; }
 .birds .birds__fixed .l-center { position: absolute; left: 0; right: 0; bottom: 0; }
 .birds .birds__fixed_footer { top: auto; bottom: 0; }
 .birds .birds__item_yellow { position: fixed; top: 101px; left: 0; right: 0; background: url(../img/birds-yellow.jpg) no-repeat 50% 100% #e8bb3e; z-index: 2; }
 .birds .birds__item_yellow .birds__content { top: 340px; left: 540px; }
-.birds .birds__item_red { margin: 740px 0; background: url(../img/birds-red.jpg) no-repeat 50% 100% #c00027; z-index: 4; }
+.birds .birds__item_red { margin: 660px 0; background: url(../img/birds-red.jpg) no-repeat 50% 100% #c00027; z-index: 4; }
 .birds .birds__item_red .birds__content { top: 310px; left: 170px; }
 .birds .birds__item_red .birds__text { margin-bottom: 15px; }
 .birds .birds__item_green { background: url(../img/birds-green.jpg) no-repeat 50% 100% #7daf36; z-index: 6; }
