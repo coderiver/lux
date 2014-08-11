@@ -192,12 +192,6 @@ head.ready(function() {
 		else {
 			angry_birds_item_1.height(0);
 		};
-		if (scroll_top >= 2102) {
-			angry_birds_item_2.height(scroll_top - 2102);
-		}
-		else {
-			angry_birds_item_2.height(0);
-		};
 
 
 	});
